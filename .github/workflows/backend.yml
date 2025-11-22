@@ -12,7 +12,7 @@ jobs:
       - name: Run Ansible Backend Deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: <ansible-ip>
+          host: 34.207.234.147
           username: ubuntu
           key: ${{ secrets.ANSIBLE_SSH_KEY }}
           script: |
