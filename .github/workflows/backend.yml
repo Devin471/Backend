@@ -17,6 +17,12 @@ jobs:
         with:
           host: 34.207.234.147
           username: ubuntu
-          key: ${{ secrets.ANSIBLE_SSH_KEY }}
+          key: ${{ secrets.-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACCXSCgkh2eLxmUeJ/1WTFzlR4t/qoFw35L43POYp4HF6QAAAJAmmEyOJphM
+jgAAAAtzc2gtZWQyNTUxOQAAACCXSCgkh2eLxmUeJ/1WTFzlR4t/qoFw35L43POYp4HF6Q
+AAAEBPqvqKcLXG7Wr1tQ3yb9Ba22V74gAnz7inFTq6tfdfnZdIKCSHZ4vGZR4n/VZMXOVH
+i3+qgXDfkvjc85ingcXpAAAAC2Fuc2libGUta2V5AQI=
+-----END OPENSSH PRIVATE KEY----- }}
           script: |
             ansible-playbook backend.yml
