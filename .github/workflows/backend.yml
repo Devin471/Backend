@@ -1,0 +1,19 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Ansible Backend Deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: <ansible-ip>
+          username: ubuntu
+          key: ${{ secrets.ANSIBLE_SSH_KEY }}
+          script: |
+            ansible-playbook backend.yml
